@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  taskium-test-debug:
+    build:
+      context: .
+      dockerfile: Dockerfile.debug
+    image: ${LOCAL_REGISTRY}:5002/taskium-test-debug:${TAG}
+    ports:
+      - 2230:2230
+
+  taskium-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ${DOCKER_LOGIN}/taskium-test:${TAG}
