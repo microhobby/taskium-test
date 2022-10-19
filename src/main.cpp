@@ -7,5 +7,5 @@ int main() {
     std::this_thread::sleep_for(std::chrono::milliseconds(60000));
     std::cout << "Hello Torizon!" << std::endl;
 
-    return 0;
+    return -22;
 }
